@@ -40,10 +40,7 @@ The Pet app uses a number of cocoapods:
 We are using very simple list and webView in this project.
 the list view is created using SwiftUI and webview is created using UIKit and WebKit
 
-<img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.19.32%20AM.png"  width="250" height="500">
-<img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.19.42%20AM.png"  width="250" height="500">
-<img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.16%20AM.png"  width="250" height="500">
-<img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.31%20AM.png"  width="250" height="500">
+<img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.19.32%20AM.png"  width="250" height="500"> <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.19.42%20AM.png"  width="250" height="500"> <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.16%20AM.png"  width="250" height="500"> <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.31%20AM.png"  width="250" height="500">
 <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.47%20AM.png"  width="250" height="500">
 
 <video src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screen%20Recording%202023-03-09%20at%2012.23.50%20AM.mov" width=250 height="500">
