@@ -1,0 +1,68 @@
+# Project configuration
+excluded:
+    - Carthage
+    - Pods
+    - Scripts
+
+# Rules
+only_rules:
+    # Colons should be next to the identifier when specifying a type.
+    - colon
+
+    # There should be no space before and one after any comma.
+    - comma
+
+    # if,for,while,do statements shouldn't wrap their conditionals in parentheses.
+    - control_statement
+
+    # Arguments can be omitted when matching enums with associated types if they
+    # are not used.
+    - empty_enum_arguments
+
+    # Prefer `() -> ` over `Void -> `.
+    - empty_parameters
+
+    # MARK comment should be in valid format.
+    - mark
+
+    # Opening braces should be preceded by a single space and on the same line as
+    # the declaration.
+    - opening_brace
+
+    # Files should have a single trailing newline.
+    - trailing_newline
+
+    # Lines should not have trailing semicolons.
+    - trailing_semicolon
+
+    # Lines should not have trailing whitespace.
+#    - trailing_whitespace
+
+    # Limit vertical whitespace to a three empty lines (rule configuration is below)
+    - vertical_whitespace
+
+    # Lines should not span too many characters.
+    - line_length
+
+    # Files should not span too many lines.
+    - file_length
+
+    # MARK comment should be in valid format.
+    # - mark
+
+    - custom_rules
+
+    # Rules configuration
+vertical_whitespace:
+    max_empty_lines: 3
+    severity: error
+
+line_length: 160
+
+file_length:
+    warning: 500
+    error: 800
+
+control_statement:
+    severity: error
+
