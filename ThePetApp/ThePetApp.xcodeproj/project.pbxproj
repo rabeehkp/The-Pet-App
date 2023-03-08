@@ -42,6 +42,8 @@
 		A34AE3AF29B90B59000D8420 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = A34AE3AB29B90B59000D8420 /* config.json */; };
 		A34AE3B029B90B59000D8420 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = A34AE3AB29B90B59000D8420 /* config.json */; };
 		A34AE3B129B90B59000D8420 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = A34AE3AB29B90B59000D8420 /* config.json */; };
+		A34AE3B229B92B42000D8420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE34129B8F509000D8420 /* ViewController.swift */; };
+		A34AE3B329B92B43000D8420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE34129B8F509000D8420 /* ViewController.swift */; };
 		EBAEDDCC2620E3FBDFE05F5B /* Pods_ThePetApp_ThePetAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9118B560C2483F794BCF08AD /* Pods_ThePetApp_ThePetAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -524,6 +526,7 @@
 				A34AE35529B8F50B000D8420 /* ThePetAppTests.swift in Sources */,
 				A34AE39C29B90ACC000D8420 /* PetRowView.swift in Sources */,
 				A34AE3A429B90AF9000D8420 /* WorkingHourConfig_Model.swift in Sources */,
+				A34AE3B229B92B42000D8420 /* ViewController.swift in Sources */,
 				A34AE3A829B90B1B000D8420 /* PetsList_ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +538,7 @@
 				A34AE39929B90AC0000D8420 /* PetListView.swift in Sources */,
 				A34AE36129B8F50B000D8420 /* ThePetAppUITestsLaunchTests.swift in Sources */,
 				A34AE39D29B90ACC000D8420 /* PetRowView.swift in Sources */,
+				A34AE3B329B92B43000D8420 /* ViewController.swift in Sources */,
 				A34AE35F29B8F50B000D8420 /* ThePetAppUITests.swift in Sources */,
 				A34AE3A529B90AF9000D8420 /* WorkingHourConfig_Model.swift in Sources */,
 				A34AE3A129B90AE0000D8420 /* ContentView_Model.swift in Sources */,

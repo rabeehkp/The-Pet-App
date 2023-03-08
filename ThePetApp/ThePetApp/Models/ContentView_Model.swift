@@ -15,7 +15,9 @@ struct PetDetailsView: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> ViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = sb.instantiateViewController(identifier: "ViewController") as! ViewController
+        guard let viewController = sb.instantiateViewController(identifier: "ViewController") as? ViewController else {
+            return ViewController(url: URL(fileURLWithPath: ""))
+        }
         viewController.url = self.url
         return viewController
     }

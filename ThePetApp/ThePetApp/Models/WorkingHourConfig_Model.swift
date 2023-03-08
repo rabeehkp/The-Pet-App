@@ -32,10 +32,10 @@ class WorkingHourConfig_Model: NSObject {
         let workHoursArr = workHours.components(separatedBy: " ")
         let workDaysArr = workHoursArr[0].components(separatedBy: "-")
         formatter.dateFormat = "HH:mm"
-
-        let startWorkTime = self.addTime(time: workHoursArr[1])
-        let endWorkTime = self.addTime(time: workHoursArr[3])
-        guard let startWorkDayIndex = daysOfWeekWithMinimal.firstIndex(of: workDaysArr[0]),
+        
+        guard let startWorkTime = self.addTime(time: workHoursArr[1]),
+              let endWorkTime = self.addTime(time: workHoursArr[3]),
+              let startWorkDayIndex = daysOfWeekWithMinimal.firstIndex(of: workDaysArr[0]),
               let endWorkDayIndex = daysOfWeekWithMinimal.firstIndex(of: workDaysArr[1]) else { return false}
         
         if let todayIndex = daysOfWeek.firstIndex(of: currentDay) {
@@ -49,7 +49,7 @@ class WorkingHourConfig_Model: NSObject {
         }
     }
     
-    private func addTime(time: String)-> Date {
+    private func addTime(time: String)-> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         let workHoursArr = time.components(separatedBy: ":")
@@ -58,16 +58,18 @@ class WorkingHourConfig_Model: NSObject {
         if let date = calendar {
            return date
         }else {
-            return formatter.date(from: time)!
+            return formatter.date(from: time)
         }
     }
     
     func convertStringToDate(dateString: String, format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        let dateObj = dateFormatter.date(from: dateString)
-
-        dateFormatter.dateFormat = format
-        return dateFormatter.string(from: dateObj!)
+        if let dateObj = dateFormatter.date(from: dateString) {
+            dateFormatter.dateFormat = format
+            return dateFormatter.string(from: dateObj)
+        }else {
+            return ""
+        }
     }
 }

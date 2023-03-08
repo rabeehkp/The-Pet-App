@@ -7,6 +7,9 @@
 
 import XCTest
 @testable import ThePetApp
+import SwiftUI
+import UIKit
+import Foundation
 
 class ThePetAppTests: XCTestCase {
 
@@ -32,5 +35,35 @@ class ThePetAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
 
+    func testGetDateAndCheckItsWorkingHour() {
+        let workingHourConfigModel = WorkingHourConfig_Model()
+        let isWorkingHour = workingHourConfigModel.getDateAndCheckItsWorkingHour()
+        XCTAssertTrue(isWorkingHour, "Not working during work hours")
+    }
+    
+    func testPetList() {
+        let contentView = ContentView()
+        let pets = PetsList_ViewModel().loadPets()
+        let petList = contentView.pets
+        XCTAssertEqual(petList.count, pets.count)
+    }
+    
+    func testPetRowView() {
+        let petRowView = PetRowView(pet: PetsList_ViewModel().loadPets().first!)
+        XCTAssertNotNil(petRowView)
+    }
+    
+    func testPetListView() {
+        let petListView = PetListView(pets: PetsList_ViewModel().loadPets())
+        XCTAssertNotNil(petListView)
+    }
+    
+    func testWorkingHourConfigModel() {
+        let workingHourConfigModel = WorkingHourConfig_Model()
+        let date = workingHourConfigModel.convertStringToDate(dateString: "2018-06-02T03:27:38.027Z", format: "yyyy-MM-dd HH:mm")
+        XCTAssertEqual(date, "2018-06-02 03:27")
+    }
+    
 }

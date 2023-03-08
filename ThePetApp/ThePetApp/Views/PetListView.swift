@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct PetListView: View {
+    let pets: [Pets_List]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(pets) { pet in
+            Section {
+                PetRowView(pet: pet)
+            }
+        }
     }
 }
 
 struct PetListView_Previews: PreviewProvider {
     static var previews: some View {
-        PetListView()
+        PetListView(pets: PetsList_ViewModel().loadPets())
     }
 }
