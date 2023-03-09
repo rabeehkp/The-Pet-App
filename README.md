@@ -30,6 +30,11 @@ Instructions
 
 ## Tech
 
+- Xcode
+- Swift
+- SwiftUI
+- MVVM 
+
 The Pet app uses a number of cocoapods:
 
 - [SwiftLint] - For code standerd
