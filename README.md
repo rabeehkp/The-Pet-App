@@ -38,7 +38,19 @@ The Pet app uses a number of cocoapods:
 ## Design
 
 We are using very simple list and webView in this project.
-the list view is created using SwiftUI and webview is created using UIKit and WebKit
+the list view is created using SwiftUI and webview is created using UIKit and WebKit . In this app we used MVVM structure for development.
+there is three screen in this app. 
+- Pets List View :
+      we created this screen using swiftUI. the values getting from the pets_list.json file it saved inside the bundle. when we open the app the .json file will be parsed to PetData and Pets_List. the details we show using Pets_List array. 
+      SDWebImageSwiftUI is a third party framework for loading image from Url with cache.
+      
+- Pet Details View :
+      Pet details view designed using UIKit. in this viewController we have created a webView using WebKit. we only passing the url the webview load the url inside the webview.
+ 
+- Out of Working View: 
+      at the time of app launching we are checking the working hour is matching into current time. if its not working hour we will show an alert view with a button named help. this screen not close if its not working hour.
+      
+      these are the screenshots of The Pet App
 
 <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.19.32%20AM.png"  width="250" height="500"> <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.19.42%20AM.png"  width="250" height="500"> <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.16%20AM.png"  width="250" height="500"> <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.31%20AM.png"  width="250" height="500"> <img src="https://github.com/rabeehkp/The-Pet-App/blob/main/Screenshot%202023-03-09%20at%2012.20.47%20AM.png"  width="250" height="500">
 
