@@ -33,19 +33,21 @@ struct Pets_List: Identifiable, Codable {
     let image_url: String
     let content_url: String
     let date_added: String
+    let createdBy: String
 
     enum CodingKeys: String, CodingKey {
         case title
         case image_url
         case content_url
         case date_added
+        case createdBy
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         self.id = UUID() // Set a default value for the id property
-        
+        self.createdBy = "Rabeeh"
         do {
             self.title = try container.decode(String.self, forKey: .title)
             self.image_url = try container.decode(String.self, forKey: .image_url)
