@@ -47,7 +47,7 @@ struct Pets_List: Identifiable, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         self.id = UUID() // Set a default value for the id property
-        self.createdBy = "Rabeeh"
+        self.createdBy = "Rabeeh001"
         do {
             self.title = try container.decode(String.self, forKey: .title)
             self.image_url = try container.decode(String.self, forKey: .image_url)
